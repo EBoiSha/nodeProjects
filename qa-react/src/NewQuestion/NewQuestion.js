@@ -31,15 +31,11 @@ class NewQuestion extends Component {
       disabled: true,
     });
 
-    await axios.post('http://localhost:3000', {
+    await axios.post('http://localhost:8081/', {
       title: this.state.title,
       description: this.state.description,
     }, {
       headers: { 'Authorization': `Bearer ${auth0Client.getIdToken()}` }
-    })
-    .then(response => console.log("Success!"))
-    .catch(function (error) {
-      console.log(error);
     });
 
     this.props.history.push('/');

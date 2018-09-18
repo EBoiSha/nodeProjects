@@ -56,7 +56,7 @@ const checkJwt = jwt({
 
 	//Validate the audience and the issuer
 	audience: 'iL2UzdSAAReh09tVoS5Z3R2gfPZu4tVg',
-	issuer: 'https://eyo.eu.auth0.com',
+	issuer: 'https://eyo.eu.auth0.com/',
 	algorithms:['RS256']
 });
 
